@@ -23,3 +23,31 @@
 .scribe-list .scribe-list-item {
     margin: 5px 0px;
 }
+
+.scribe-table {
+    width: 100%;
+    height: fit-content;
+}
+
+.scribe-table-heading {
+    background: #bbbbbb;
+    /* padding: 2px; */
+    font-size: 14px;
+    color: black;
+}
+
+.scribe-table-heading-row {
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+.scribe-table-heading-col {
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+.scribe-table-body-col {
+    padding: 5px 10px;
+    text-align: center;
+
+}
