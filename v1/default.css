@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.scribe-parser {
+    position: relative;
+    padding: 10px;
+    background: white;
+    color: black;
+}
+
+.scribe-heading {
+    margin: 5px 0px;
+}
+
+.scribe-pragraph {
+    margin: 10px 0px;
+}
+
+.scribe-list .scribe-list-item {
+    margin: 5px 0px;
+}
