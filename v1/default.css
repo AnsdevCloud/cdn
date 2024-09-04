@@ -31,7 +31,6 @@
 
 .scribe-table-heading {
     background: #bbbbbb;
-    /* padding: 2px; */
     font-size: 14px;
     color: black;
 }
@@ -50,4 +49,271 @@
     padding: 5px 10px;
     text-align: center;
 
+}
+
+/* Container for the editor and the button */
+.scribe-editor-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #3a3535;
+}
+
+.scribe-code-tools {
+    height: fit-content;
+    max-height: 500px;
+}
+
+.scribe-editor-header {
+    width: 100%;
+    height: 40px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: "#000000";
+}
+
+.scribe-code-label {
+    font-size: 12px;
+    color: #ffffffc3;
+    text-transform: capitalize;
+}
+
+/* Style for the copy button */
+.scribe-copy-button {
+    background-color: #161616;
+    color: #ffffffd9;
+    font-size: 10px;
+    text-transform: uppercase;
+
+    padding: 2px 5px;
+    border: 1px solid #ffffff5b;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for the copy button */
+.scribe-copy-button:hover {
+    background-color: #232020;
+}
+
+/* list css */
+
+.scribe-list>.scribe-list-item::before {
+    content: "★";
+    /* Star symbol */
+    color: #007bff;
+    position: absolute;
+    left: 0;
+    top: auto;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "→";
+    /* Arrow symbol */
+    color: #ff5722;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "◆";
+    /* Diamond symbol */
+    color: #4caf50;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "✦";
+    /* Sparkle symbol */
+    color: #9c27b0;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "✸";
+    /* Flower symbol */
+    color: #ff9800;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "✵";
+    /* Six-pointed star symbol */
+    color: #3f51b5;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "✷";
+    /* Star symbol */
+    color: #009688;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "❖";
+    /* Diamond with a dot symbol */
+    color: #c2185b;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "✿";
+    /* Flower symbol */
+    color: #8bc34a;
+    margin-right: 10px;
+}
+
+.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
+    content: "⚫";
+    /* Black circle symbol */
+    color: #607d8b;
+    margin-right: 10px;
+}
+
+/* Additional styles for all nested levels */
+.scribe-list li {
+    margin-bottom: 5px;
+    /* Space between list items */
+}
+
+.scribe-list li a {
+    color: #007bff;
+    /* Link color */
+    text-decoration: none;
+}
+
+.scribe-list li a:hover {
+    text-decoration: underline;
+}
+
+
+/* audio player */
+
+.scribe-player {
+    display: flex;
+    align-items: center;
+    background-color: #282828;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: white;
+    width: 500px;
+    font-family: Arial, sans-serif;
+}
+
+.scribe-track-info {
+    flex: 2;
+}
+
+.scribe-track-info h4 {
+    margin: 0;
+    font-size: 16px;
+    color: #1db954;
+}
+
+.scribe-track-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: #b3b3b3;
+}
+
+.scribe-controls {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scribe-skip-button,
+.scribe-play-pause-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.scribe-skip-button:hover,
+.scribe-play-pause-button:hover {
+    color: #1db954;
+}
+
+.scribe-progress-container {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.scribe-progress-container progress {
+    width: 100%;
+    height: 5px;
+    background-color: #404040;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.scribe-progress-container .scribe-time {
+    font-size: 12px;
+    color: #b3b3b3;
+}
+
+.scribe-volume-control {
+    flex: 1;
+}
+
+.scribe-volume-control input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #404040;
+    height: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.scribe-volume-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.scribe-volume-control input[type="range"]::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background-color: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* delemiter */
+
+.scribe-delimiter {
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+
+.scribe-delimiter::before {
+    display: inline-block;
+    content: "***";
+    color: inherit;
+    font-size: 30px;
+    line-height: 65px;
+    height: 30px;
+    letter-spacing: .2em;
 }
