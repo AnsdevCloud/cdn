@@ -1,319 +1,702 @@
+.scribe-html-container {
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+/* heading---------------- */
+
+.scribe-header {
+    font-weight: 600;
+    color: inherit;
+    margin: 10px 0;
+}
+
+/* Base Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
-.scribe-parser {
-    position: relative;
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 1rem 0 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    /* color: inherit; */
+}
+
+ul {
+    margin-bottom: 1rem;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+th,
+td {
     padding: 10px;
-    background: white;
-    color: black;
+    border: 1px solid #ccc;
+    text-align: left;
 }
 
-.scribe-heading {
-    margin: 5px 0px;
+thead {
+    background-color: #f4f4f4;
 }
 
-.scribe-pragraph {
-    margin: 10px 0px;
+
+h1 {
+    font-size: 2.5rem;
+    /* 40px */
 }
 
-.scribe-list .scribe-list-item {
-    margin: 5px 0px;
+h2 {
+    font-size: 2rem;
+    /* 32px */
 }
 
-.scribe-table {
-    width: 100%;
-    height: fit-content;
+h3 {
+    font-size: 1.75rem;
+    /* 28px */
 }
 
-.scribe-table-heading {
-    background: #bbbbbb;
-    font-size: 14px;
-    color: black;
+h4 {
+    font-size: 1.5rem;
+    /* 24px */
 }
 
-.scribe-table-heading-row {
-    border: 1px solid #000;
-    padding: 5px 10px;
+h5 {
+    font-size: 1.25rem;
+    /* 20px */
 }
 
-.scribe-table-heading-col {
-    border: 1px solid #000;
-    padding: 5px 10px;
+p,
+li,
+table {
+    font-size: 1rem;
+    /* 16px */
 }
 
-.scribe-table-body-col {
-    padding: 5px 10px;
-    text-align: center;
-
-}
-
-/* Container for the editor and the button */
-.scribe-editor-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100px;
-    align-items: flex-start;
-    width: 100%;
-    max-width: 800px;
+/* Basic image styling */
+img {
+    max-width: 100%;
+    /* Ensures the image scales down to fit its container */
+    height: auto;
+    /* Maintains the aspect ratio */
+    display: block;
+    /* Removes any extra whitespace below the image */
     margin: 0 auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Center-aligns the image */
     border-radius: 8px;
-    background-color: #3a3535;
+    /* Optional: Adds rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Optional: Adds a subtle shadow */
 }
 
-.scribe-code-tools {
-    width: 100%;
-    height: 450px;
+/* Caption styling */
+figure {
+    margin: 0;
+    text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-.scribe-editor-header {
-    width: 100%;
-    height: 40px;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: "#000000";
+figcaption {
+    font-size: 0.875rem;
+    /* Slightly smaller text for captions */
+    text-align: center;
+    color: #666;
+    /* Lighter text color for captions */
+    margin-top: 0.5rem;
 }
 
-.scribe-code-label {
-    font-size: 12px;
-    color: #ffffffc3;
-    text-transform: capitalize;
-}
 
-/* Style for the copy button */
-.scribe-copy-button {
-    background-color: #161616;
-    color: #ffffffd9;
-    font-size: 10px;
-    text-transform: uppercase;
 
-    padding: 2px 5px;
-    border: 1px solid #ffffff5b;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-}
+/* Responsive iframe container */
+/* .scribe-embed {
 
-/* Hover effect for the copy button */
-.scribe-copy-button:hover {
-    background-color: #232020;
-}
+} */
 
-/* list css */
-
-.scribe-list>.scribe-list-item::before {
-    content: "★";
-    /* Star symbol */
-    color: #007bff;
-    position: absolute;
+/* Style the iframe itself */
+iframe {
+    position: relative;
+    top: 0;
     left: 0;
-    top: auto;
-    margin-right: 10px;
+    border: 0;
+    /* Remove borders */
+    border-radius: 8px;
+    /* Optional: Rounded corners on the iframe */
 }
 
-.scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "→";
-    /* Arrow symbol */
-    color: #ff5722;
-    margin-right: 10px;
+
+
+
+/* Style the container of the audio player */
+.scribe-player-container {
+    margin: 20px 0;
+    text-align: center;
 }
 
-.scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "◆";
-    /* Diamond symbol */
-    color: #4caf50;
-    margin-right: 10px;
+audio {
+    width: 100%;
+    /* max-width: 400px; */
+    /* Optional: Limit the max width of the audio player */
+    margin: 0 auto;
+    outline: none;
+    /* Remove outline on focus */
 }
 
-.scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "✦";
-    /* Sparkle symbol */
-    color: #9c27b0;
-    margin-right: 10px;
+/* Optional: Customize the look of the audio controls on WebKit browsers (e.g., Chrome, Safari) */
+audio::-webkit-media-controls-panel {
+    background-color: #ffffff;
+    /* Background color for the control panel */
+    border-radius: 8px;
+    /* Rounded corners */
 }
 
-.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "✸";
-    /* Flower symbol */
-    color: #ff9800;
-    margin-right: 10px;
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-volume-slider {
+    filter: brightness(0.8);
+    /* Make the buttons and slider slightly darker */
 }
 
-.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "✵";
-    /* Six-pointed star symbol */
-    color: #3f51b5;
-    margin-right: 10px;
+
+
+
+/* Container for the horizontal link card */
+.scribe-link-container {
+    position: relative;
+    border: 1px solid #e2e6ea;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* Clean white background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    max-width: 100%;
 }
 
-.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "✷";
-    /* Star symbol */
-    color: #009688;
-    margin-right: 10px;
+/* Hover effect to enhance card appearance */
+.scribe-link-container:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Enhanced shadow on hover */
+    transform: translateY(-4px);
+    /* Lift effect on hover */
 }
 
-.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "❖";
-    /* Diamond with a dot symbol */
-    color: #c2185b;
-    margin-right: 10px;
-}
-
-.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "✿";
-    /* Flower symbol */
-    color: #8bc34a;
-    margin-right: 10px;
-}
-
-.scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list li .scribe-list>.scribe-list-item::before {
-    content: "⚫";
-    /* Black circle symbol */
-    color: #607d8b;
-    margin-right: 10px;
-}
-
-/* Additional styles for all nested levels */
-.scribe-list li {
-    margin-bottom: 5px;
-    /* Space between list items */
-}
-
-.scribe-list li a {
-    color: #007bff;
-    /* Link color */
+.scribe-main-url {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
     text-decoration: none;
 }
 
-.scribe-list li a:hover {
-    text-decoration: underline;
+/* Styling for the image section */
+.scribe-link-image-box {
+    flex-shrink: 0;
+    width: 200px;
+    /* Fixed width for image */
+    height: 100%;
+    overflow: hidden;
 }
 
-
-/* audio player */
-
-.scribe-player {
-    display: flex;
-    align-items: center;
-    background-color: #282828;
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: white;
-    width: 500px;
-    font-family: Arial, sans-serif;
+.scribe-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    background-position: center;
+    /* Ensure image covers the box without distortion */
 }
 
-.scribe-track-info {
-    flex: 2;
-}
-
-.scribe-track-info h4 {
-    margin: 0;
-    font-size: 16px;
-    color: #1db954;
-}
-
-.scribe-track-info p {
-    margin: 5px 0 0;
-    font-size: 14px;
-    color: #b3b3b3;
-}
-
-.scribe-controls {
+/* Styling for the content section */
+.scribe-content {
+    padding: 15px;
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styling for the title */
+.scribe-content .scribe-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #333;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limits text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Hide the overflowed text */
+    text-overflow: ellipsis;
+}
+
+/* Styling for the description */
+.scribe-content .scribe-description {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* Limits text to 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* Hide the overflowed text */
+    text-overflow: ellipsis;
+}
+
+/* Styling for the domain container */
+.scribe-domain-container {
+    background-color: #f1f3f5;
+    /* Light gray background */
+    padding: 10px 15px;
+    border-top: 1px solid #e2e6ea;
+    /* Border to separate from content */
+}
+
+.scribe-domain-url {
+    text-decoration: none;
+    color: #abb0b6;
+    /* Primary color for the domain link */
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.scribe-domain-url:hover {
+    text-decoration: underline;
+    /* Underline on hover */
+}
+
+.scribe-delimiter {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: 900;
+    padding: 10px;
+    position: relative;
+    height: 100px;
+
+
+}
+
+/* .scribe-delimiter::before {
+    content: '----::-::----';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 2rem;
+} */
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+
+    .scribe-link-image-box {
+        width: 200px;
+        height: 100%;
+    }
+
+    .scribe-link-image-box img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .scribe-content .scribe-title {
+        font-size: 1rem;
+    }
+
+    .scribe-content .scribe-description {
+        font-size: .8rem;
+    }
+}
+
+
+@media (max-width:425px) {
+    .scribe-main-url {
+        flex-direction: column;
+        /* align-items: center;
+            text-align: center; */
+    }
+
+    .scribe-link-image-box {
+        width: 100%;
+        max-height: 200px;
+
+    }
+}
+
+/* Container for the code box */
+.scribe-code-box {
+    position: relative;
+    border-radius: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    /* Monospace font for code */
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    /* Horizontal scroll for long code lines */
+}
+
+/* Top bar with title and optional actions (e.g., copy button) */
+.scribe-code-box-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #4c566a;
+    padding: 5px 16px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    color: #d8dee9;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
-.scribe-skip-button,
-.scribe-play-pause-button {
-    background: none;
+/* Title on the code box (e.g., language or description) */
+.scribe-code-box-title {
+    color: #a8a8a8;
+    font-size: 10px;
+    text-transform: capitalize;
+}
+
+/* Optional button to copy the code */
+.scribe-copy-button {
+    background-color: #88c0d0;
     border: none;
-    color: white;
-    font-size: 18px;
+    color: #2e3440;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    display: none;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.scribe-skip-button:hover,
-.scribe-play-pause-button:hover {
-    color: #1db954;
+.scribe-copy-button:hover {
+    background-color: #81a1c1;
 }
 
-.scribe-progress-container {
-    flex: 2;
+/* Code block styling */
+.scribe-code-content {
+    padding: 10px;
+    font-size: 0.95rem;
+    background-color: #f9f9f9;
+    /* Ensures code content text is light */
+
+    border-radius: 0 0 10px 10px;
+    /* Preserves whitespace and line breaks */
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+/* Scroll bar styling */
+.scribe-code-content::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scribe-code-content::-webkit-scrollbar-thumb {
+    background-color: #4c566a;
+    border-radius: 10px;
+}
+
+
+
+/* Base alert container */
+.scribe-alert-container {
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.5;
     display: flex;
     align-items: center;
-    margin: 0 20px;
-}
-
-.scribe-progress-container progress {
-    width: 100%;
-    height: 5px;
-    background-color: #404040;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.scribe-progress-container .scribe-time {
-    font-size: 12px;
-    color: #b3b3b3;
-}
-
-.scribe-volume-control {
-    flex: 1;
-}
-
-.scribe-volume-control input[type="range"] {
-    width: 100%;
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: #404040;
-    height: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.scribe-volume-control input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 12px;
-    height: 12px;
-    background-color: #1db954;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.scribe-volume-control input[type="range"]::-moz-range-thumb {
-    width: 12px;
-    height: 12px;
-    background-color: #1db954;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-/* delemiter */
-
-.scribe-delimiter {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    /* Default light background color */
+    color: #333;
+    /* Default text color */
     position: relative;
-    width: 100%;
-    text-align: center;
+}
+
+/* Close button styling */
+.scribe-alert-container .close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.scribe-alert-container .close-btn:hover {
+    color: #e5e5e5;
+}
+
+/* Alignment classes */
+.scribe-align.left {
+    justify-content: flex-start;
+}
+
+.scribe-align.center {
+    justify-content: center;
+}
+
+.scribe-align.right {
+    justify-content: flex-end;
+}
+
+/* Alert types with light background and darker border */
+.scribe-alert-primary {
+    background-color: #ffffff;
+    /* Light background for primary */
+    border-left: 4px solid #d83600;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-secondary {
+    background-color: #ffffff;
+    /* Light background for secondary */
+    border-left: 4px solid #6c757d;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-info {
+    background-color: #ffffff;
+    /* Light background for info */
+    border-left: 4px solid #17a2b8;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-danger {
+    background-color: #ffffff;
+    /* Light background for danger */
+    border-left: 4px solid #dc3545;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-success {
+    background-color: #ffffff;
+    /* Light background for success */
+    border-left: 4px solid #28a745;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-light {
+    background-color: #f8f9fa;
+    /* Light background for light */
+    border-left: 4px solid #e2e6ea;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-dark {
+    background-color: #ffffff;
+    /* Light background for dark */
+    border-left: 4px solid #343a40;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+.scribe-alert-warning {
+    background-color: #ffffff;
+    /* Light background for warning */
+    border-left: 4px solid #ffc107;
+    /* Darker border for emphasis */
+    color: #333;
+}
+
+/* Message alignment */
+.scribe-alert-message {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 
-.scribe-delimiter::before {
-    display: inline-block;
-    content: "***";
-    color: inherit;
-    font-size: 30px;
-    line-height: 65px;
-    height: 30px;
-    letter-spacing: .2em;
+/* Base container for quotes */
+.scribe-quote-container {
+    padding: 20px;
+    /* border-left: 4px solid #007bff; */
+    /* Primary color for emphasis */
+    /* background-color: #ffffff; */
+    /* Clean, white background */
+    border-radius: 8px;
+    margin: 20px 0;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* Subtle shadow for depth */
+    position: relative;
+}
+
+/* Styling for blockquote */
+.scribe-quote {
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 5px 10px;
+    color: #333;
+    font-style: italic;
+    position: relative;
+}
+
+/* Decorative quotation marks */
+.scribe-quote::before {
+    content: open-quote;
+    font-size: 4rem;
+    color: #007bff;
+    /* Primary color for emphasis */
+    position: absolute;
+    left: -30px;
+    top: -20px;
+}
+
+.scribe-quote::after {
+    content: close-quote;
+    font-size: 4rem;
+    color: #007bff;
+    /* Primary color for emphasis */
+    position: absolute;
+
+    right: -30px;
+    top: -20px;
+}
+
+/* Styling for signature */
+.scribe-signature {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin: 10px 0 0;
+    font-style: italic;
+    color: #555;
+    text-align: right;
+    /* Align text to right for professional look */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .scribe-quote {
+        font-size: 1.25rem;
+    }
+
+    .scribe-signature {
+        font-size: 1rem;
+    }
+}
+
+/* Responsive */
+
+
+
+/* Tablet (768px - 1199px) */
+@media (max-width: 1199px) {
+    h1 {
+        font-size: 2.25rem;
+        /* 36px */
+    }
+
+    h2 {
+        font-size: 1.875rem;
+        /* 30px */
+    }
+
+    h3 {
+        font-size: 1.625rem;
+        /* 26px */
+    }
+
+    h4 {
+        font-size: 1.375rem;
+        /* 22px */
+    }
+
+    h5 {
+        font-size: 1.125rem;
+        /* 18px */
+    }
+
+    p,
+    li,
+    table {
+        font-size: 0.9375rem;
+        /* 15px */
+    }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2rem;
+        /* 32px */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+        /* 28px */
+    }
+
+    h3 {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    h4 {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+
+    h5 {
+        font-size: 1rem;
+        /* 16px */
+    }
+
+    p,
+    li,
+    table {
+        font-size: 0.875rem;
+        /* 14px */
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #f4f4f4;
+    margin-top: 20px;
+    border-top: 1px solid #ccc;
 }
