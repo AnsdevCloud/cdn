@@ -80,7 +80,7 @@ h5 {
 }
 
 .scribe-paragraph,
-li,
+.scribe-list-item,
 table {
     font-size: 1rem;
     /* 16px */
@@ -126,7 +126,7 @@ figcaption {
 } */
 
 /* Style the iframe itself */
-iframe {
+.scribe-embed iframe {
     position: relative;
     top: 0;
     left: 0;
@@ -540,14 +540,8 @@ audio::-webkit-media-controls-volume-slider {
 /* Base container for quotes */
 .scribe-quote-container {
     padding: 20px;
-    /* border-left: 4px solid #007bff; */
-    /* Primary color for emphasis */
-    /* background-color: #ffffff; */
-    /* Clean, white background */
     border-radius: 8px;
     margin: 20px 0;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    /* Subtle shadow for depth */
     position: relative;
 }
 
@@ -638,8 +632,8 @@ audio::-webkit-media-controls-volume-slider {
         /* 18px */
     }
 
-    p,
-    li,
+    .scribe-paragraph,
+    .scribe-list-item,
     table {
         font-size: 0.9375rem;
         /* 15px */
@@ -673,8 +667,8 @@ audio::-webkit-media-controls-volume-slider {
         /* 16px */
     }
 
-    p,
-    li,
+    .scribe-paragraph,
+    .scribe-list-item,
     table {
         font-size: 0.875rem;
         /* 14px */
