@@ -17,33 +17,22 @@
     margin: 10px 0;
 }
 
-/* Base Styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Typography */
-h1,
-h2,
-h3,
-h4,
-h5 {
+.scribe-header {
     margin: 1rem 0 0.5rem;
 }
 
-p {
+.scribe-paragraph {
     margin-bottom: 1rem;
     /* color: inherit; */
 }
 
-ul {
+.scribe-list {
     margin-bottom: 1rem;
     padding-left: 20px;
 }
 
-li {
+.scribe-list-item {
     margin-bottom: 0.5rem;
 }
 
@@ -90,7 +79,7 @@ h5 {
     /* 20px */
 }
 
-p,
+.scribe-paragraph,
 li,
 table {
     font-size: 1rem;
@@ -98,7 +87,7 @@ table {
 }
 
 /* Basic image styling */
-img {
+.scribe-image {
     max-width: 100%;
     /* Ensures the image scales down to fit its container */
     height: auto;
@@ -114,7 +103,7 @@ img {
 }
 
 /* Caption styling */
-figure {
+.scribe-image-caption {
     margin: 0;
     text-align: center;
     margin-bottom: 1.5rem;
