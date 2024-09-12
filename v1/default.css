@@ -209,7 +209,7 @@ audio::-webkit-media-controls-volume-slider {
     overflow: hidden;
 }
 
-.scribe-image {
+.scribe-link-image-box .scribe-image {
     width: 100%;
     height: auto;
     display: block;
@@ -313,7 +313,7 @@ audio::-webkit-media-controls-volume-slider {
         height: 100%;
     }
 
-    .scribe-link-image-box img {
+    .scribe-link-image-box .scribe-image {
         width: 100%;
         height: 100%;
     }
